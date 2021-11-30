@@ -20,18 +20,18 @@ let chanceError = 0;
 
 let hit = false;
 
-//Placar
+//Point
 let meuponto = 0;
 let pontoenemy = 0;
 
 //Sound
 let soundRaquete;
-let soundPonto;
+let soundPoint;
 let soundBackgraund;
 
 function preload(){
   soundRaquete = loadSound("../sound/raquetada.mp3");
-  soundPonto = loadSound("../sound/ponto.mp3");
+  soundPoint = loadSound("../sound/ponto.mp3");
   soundBackgraund = loadSound("../sound/trilha.mp3");
 }
 function setup() {
@@ -72,7 +72,7 @@ function makeraquete(x,y) {
 }
 function moveraquete() {
   if (keyIsDown(UP_ARROW)) {
-    yraquete -= 10;
+      yraquete -= 10;
   }
   if (keyIsDown(DOWN_ARROW)) {
     yraquete += 10;
@@ -120,10 +120,10 @@ function placar(){
 function marcaplacar(){
   if(xball > 590){
     meuponto += 1;
-    soundPonto.play();
+    soundPoint.play();
 }
   if(xball < 10){
     pontoenemy += 1;
-    soundPonto.play();
+    soundPoint.play();
   }
 }
