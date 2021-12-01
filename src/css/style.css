@@ -1,7 +1,16 @@
-html, body {
+*{
   margin: 0;
   padding: 0;
 }
-canvas {
+main{
+  margin: auto;
+  width: 800px;
+}
+#canvas{
+  margin: auto;
+  width: 600px;
+  height: 400px;
+}
+#canvas >canvas {
   display: block;
 }

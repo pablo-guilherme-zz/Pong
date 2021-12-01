@@ -17,7 +17,7 @@ let yenemy = 150;
 let yspeedenemy;
 
 let chanceError = 0;
-
+let canvas;
 let hit = false;
 
 //Point
@@ -35,7 +35,8 @@ function preload(){
   soundBackgraund = loadSound("/src/sound/trilha.mp3");
 }
 function setup() {
-  createCanvas(600, 400);
+  canvas = createCanvas(600, 400);
+  canvas.parent('canvas');
   soundBackgraund.loop();
 }
 function draw() {
@@ -72,9 +73,12 @@ function makeraquete(x,y) {
 }
 function moveraquete() {
   if (keyIsDown(UP_ARROW)) {
+    if(yraquete>0){
       yraquete -= 10;
+    }
   }
   if (keyIsDown(DOWN_ARROW)) {
+    if(yraquete<305)
     yraquete += 10;
   }
 }
