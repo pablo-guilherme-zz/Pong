@@ -30,9 +30,9 @@ let soundPoint;
 let soundBackgraund;
 
 function preload(){
-  soundRaquete = loadSound("../sound/raquetada.mp3");
-  soundPoint = loadSound("../sound/ponto.mp3");
-  soundBackgraund = loadSound("../sound/trilha.mp3");
+  soundRaquete = loadSound("/src/sound/raquetada.mp3");
+  soundPoint = loadSound("/src/sound/ponto.mp3");
+  soundBackgraund = loadSound("/src/sound/trilha.mp3");
 }
 function setup() {
   createCanvas(600, 400);
